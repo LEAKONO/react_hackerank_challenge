@@ -1,16 +1,16 @@
 import React from 'react'
 import UserItem from './UserItem'
 
-function UserList({filteredData}) {
+function UserList({filtered}) {
   return (
     <div>
         
         <h2>UserList</h2>
-        {filteredData.length==0?(
+        {filtered.length===0?(
            <p>No users found.</p>
 
         ):
-        filteredData.map(user=>(
+        filtered.map(user=>(
          < UserItem key={user.id} user={user}  />
         ))}
 
